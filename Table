@@ -1,0 +1,21 @@
+#Creating and inserting data into a table
+
+CREATE DATABASE starter;
+USE starter;
+
+Create table Customers(
+cust_id Int auto_increment Primary key,
+cust_name VARCHAR(100),
+cust_contact Int,
+Address Varchar(100),
+City Varchar(100),
+postal_code Varchar(10),
+Country Varchar(60)
+);
+
+
+Insert into Customers(cust_name , cust_contact , Address , City , postal_code,Country)
+Values
+("Alli" , 999888 , "Obere Str. 57" , "olaf city", "12209" , "Germany"),
+("Alvink" , 888222 , "Yank Str. 23" , "Hazelnut city" , " 23dq11" , "America"),
+("Yudi" , 435363 , "Oberoi Street" , "Husanpur" , "222201" , "India");
