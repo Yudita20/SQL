@@ -1,0 +1,47 @@
+-- UNION 
+-- Combines two or more tables and remove the duplicate entry
+
+-- CREATE TABLE c(
+-- CID INT PRIMARY KEY,
+-- CNAME VARCHAR(30),
+-- CCOUNTRY VARCHAR(30)
+-- );
+
+-- INSERT INTO c 
+-- VALUES
+-- (1,"ALI","GERMANY"),
+-- (2,"ARI","GERMANY"),
+-- (3,"BAHA","AUSTRALIA");
+
+-- CREATE TABLE s(
+-- SID INT PRIMARY KEY,
+-- SNAME VARCHAR(30),
+-- SCOUNTRY VARCHAR(30)
+-- );
+
+-- INSERT INTO s 
+-- VALUES
+-- (1,"BAHANA","AUSTRALIA"),
+-- (2,"VANDANA","INDIA"),
+-- (3,"ORI","GERMANY");
+
+SELECT CCOUNTRY FROM c
+UNION
+SELECT SCOUNTRY FROM s;
+
+SELECT COUNT(*) FROM 
+(SELECT CCOUNTRY FROM c
+UNION
+SELECT SCOUNTRY FROM s) AS Countries;
+
+-- INSERT INTO c
+-- VALUES
+-- (5,"M","RUSSIA");
+
+-- INSERT INTO s
+-- VALUES
+-- (5,"M","RUSSIA");
+
+SELECT * FROM c
+UNION
+SELECT * FROM s;
